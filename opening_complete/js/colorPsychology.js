@@ -7,5 +7,38 @@ const addNewDiv = () =>{
     //determine where this div is going to show up 
     const existingElement = document.getElementById("portfolioRight");//this is an element from the DOM
     existingElement.appendChild(newDiv); //appends the new div to an existing element to make it show on the DOM
+}
+
+
+//html element to be created dynamically
+{/* <div class="btn cpRed">Excitement</div>  */}
+
+// const colorPsychologyContainer = document.getElementById("colorPsychology");
+//create new element that is a button
+// const newElement = document.createElement("button")
+//set the class of the element to cpRed
+// newElement.classList.add("cpRed")
+// newElement.classList.add("btn")
+//set the innerText og the button to "Excitement"
+// newElement.innerText = "Excitement"
+//append the new element to the div with ID "colorPsychology"
+// colorPsychologyContainer.appendChild(newElement)
+
+
+//to iterate through all the key value pairs in the color object
+for(let pycholology in colorMap){
+    console.log(pycholology);
+    console.log(colorMap[pycholology]);
+
+    const colorPsychologyContainer = document.getElementById("colorPsychology");
+    //create new element that is a button
+    const newElement = document.createElement("button")
+    //set the class of the element to cpRed
+    newElement.classList.add(colorMap[pycholology])
+    newElement.classList.add("btn")
+    //set the innerText og the button to "Excitement"
+    newElement.innerText = pycholology
+    //append the new element to the div with ID "colorPsychology"
+    colorPsychologyContainer.appendChild(newElement)
 
 }
