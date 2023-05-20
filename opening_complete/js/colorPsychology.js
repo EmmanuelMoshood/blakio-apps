@@ -26,18 +26,18 @@ const addNewDiv = () =>{
 
 
 //to iterate through all the key value pairs in the color object
-for(let pycholology in colorMap){
-    console.log(pycholology);
-    console.log(colorMap[pycholology]);
+for(let psycholology in colorMap){
+    // console.log(psycholology);
+    // console.log(colorMap[psycholology]);
 
     const colorPsychologyContainer = document.getElementById("colorPsychology");
     //create new element that is a button
     const newElement = document.createElement("button")
     //set the class of the element to cpRed
-    newElement.classList.add(colorMap[pycholology])
+    newElement.classList.add(colorMap[psycholology])
     newElement.classList.add("btn")
     //set the innerText og the button to "Excitement"
-    newElement.innerText = pycholology
+    newElement.innerText = psycholology
     //append the new element to the div with ID "colorPsychology"
     colorPsychologyContainer.appendChild(newElement)
 
