@@ -1,7 +1,7 @@
 const offscreen = "offscreen";
 
 
-
+/************* Switch an element on and off based on its attribute */
 const toggleAttribute = (ele, attr, value="") => {
     const hasAttribute = ele.hasAttribute(offscreen);
     if(hasAttribute){
@@ -23,3 +23,15 @@ const simpleFunc = () => {
         simElement.setAttribute("simplistic", "")
     }
 }
+
+/************************************ Return the DOM element selected by ID */
+const getById = (id) =>{
+    return document.getElementById(id)
+}
+
+/************************************ Return random char from string */
+const getRandomCharFromString = (str) =>{
+    const randomIndex = Math.floor(Math.random() * str.length);
+    return str[randomIndex]
+}
+
