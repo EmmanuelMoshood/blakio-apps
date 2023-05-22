@@ -35,3 +35,8 @@ const getRandomCharFromString = (str) =>{
     return str[randomIndex]
 }
 
+/************************************ Return random item from array */
+const getRandomItemFromArray = (array) =>{
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex]
+}
