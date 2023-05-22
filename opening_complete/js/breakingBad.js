@@ -26,7 +26,6 @@ const getQuote = () => {
     //display the variable content on the DOM in thei respective elements
     const displayedQuote = getById("quoteText");
     const displayedAuthor = getById("breakingBadAuthor")
-
     displayedQuote.innerText = quote;
     displayedAuthor.innerText = author;
     
