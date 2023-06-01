@@ -109,7 +109,7 @@ const makeMemoryGuess = id =>{
         console.log("correct move")
             if(clickIndex === cpuMoves.length){
                 clickIndex = 0;
-                setCurrentScrore();
+                setCurrentScore();
                 setTimeout(()=>{ //adds delay of a second before calling the cpu's next move
                     cpuMove();
                 }, 1000);
@@ -121,7 +121,7 @@ const makeMemoryGuess = id =>{
 }
 
 let score = 0; //starting value of score 
-const setCurrentScrore = () =>{
+const setCurrentScore = () =>{
     //take the scoreEle and assign the score value
     //score value starts from 1 and is incremented whenever this function is called 
     score += 1; 
@@ -155,7 +155,12 @@ const setHighScore = (score) =>{
 
     if(score > storedHighScore){
         storedHighScore = score;
+        localStorage.setItem(currentHighScore, score);
     }
 
     getById("mgHighScore").innerText = storedHighScore;
+
+    console.log(`storedHighScore is ${storedHighScore}`)
 }
+
+setHighScore(); //calls this function on page load 
