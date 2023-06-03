@@ -16,7 +16,7 @@ const arr = [
     [true, true, true, 3],
     [true, true, true, 4],
     [true, true, true, 5],
-    [true, true, true, 6],
+    [true, true, false, 6],
     [true, true, true, 7],
     [true, true, true, 8],
     [true, true, true, 9],
@@ -25,13 +25,24 @@ const arr = [
 
 const checkWin = (arr) => {
     let result = null;
-    arr.forEach(eachArr => {
+    // arr.forEach(eachArr => {
+    //     if (eachArr[0] && eachArr[1] && eachArr[2]) {
+    //         result = eachArr[3];
+    //     }
+    // });
+    // for(const eachArr of arr){
+    //     if (eachArr[0] && eachArr[1] && eachArr[2]) {
+    //         result = eachArr[3];
+    //     }
+    // }
+
+    for(let i = 0; i < arr.length; i++){
+        const eachArr = arr[i];
         if (eachArr[0] && eachArr[1] && eachArr[2]) {
-            result = eachArr[3];
-            console.log(result)
+            return eachArr[3];
         }
-    });
-    return result;
+    }
+    // return result;
 };
 
 

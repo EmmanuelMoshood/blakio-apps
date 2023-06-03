@@ -2,8 +2,22 @@ const offscreen = "offscreen";
 
 
 /************* Switch an element on and off based on its attribute */
-const toggleAttribute = (ele, attr, value="") => {
+const toggleAttribute2 = (ele, attr, value="") => {
     const hasAttribute = ele.hasAttribute(offscreen);
+    if(hasAttribute){
+        // remove the offset attribute
+        ele.removeAttribute(attr);
+    } else {
+        // add the offset attribute
+        ele.setAttribute(attr, value);
+    }
+
+    console.log("this is element is use toggleAttribute with offscreen hard coded")
+}
+
+/************* Switch an element on and off based on its attribute */
+const toggleAttribute = (ele, attr, value="") => {
+    const hasAttribute = ele.hasAttribute(attr);
     if(hasAttribute){
         // remove the offset attribute
         ele.removeAttribute(attr);
