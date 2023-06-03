@@ -67,7 +67,7 @@ const whacAMoleMenuStart = () => {
 
     const whacAMoleDirections = getById("whacAMoleDirections");
     toggleAttribute(whacAMoleDirections, "nodisplay");
-    whacAMoleDirections.innerText = whakAMoleText.endText;
+    whacAMoleDirections.innerText = whakAMoleText.intro;
 }
 
 const resetwhacAMoleGame = () => {
@@ -137,7 +137,7 @@ const setWhakAMoleHighScoreIfHigher = () => {
 
 const setWhakAMoleHighScore = score => {
     whakAMoleScore = localStorage.getItem(wamKey);
-    if !whakAMoleScore {
+    if (!whakAMoleScore) {
         localStorage.setItem(wamKey, 0);
     }
     if(score){
