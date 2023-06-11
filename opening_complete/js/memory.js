@@ -7,6 +7,7 @@ const mgString = {
     memoryHighlight : "memoryHighlight",
     nodisplay : "nodisplay"
 }
+
 //utilities
 const setAttr = (domElement, attributeName, attributeValue) => {
     domElement.setAttribute(attributeName , attributeValue);
@@ -59,6 +60,8 @@ let cpuMoves = []
 //says whose turn is to play
 let isCPUTurn = true;
 let clickIndex = 0;
+const currentHighScore = "mgHighScore" //key used for highscore in Local storage
+
 
 const showMGDirections = () => {
     console.log("showMGDirections()")
@@ -144,13 +147,10 @@ const gameOver = () =>{
 }
 
 const setHighScore = (score) =>{
-    let currentHighScore = "mgHighScore" //key used for highscore in Local storage
     let storedHighScore = localStorage.getItem(currentHighScore);
 
     if(!storedHighScore){//highscore doesnot exist
-        let highScore = 1;
-        //set highScore of 10 to the localStorage
-        localStorage.setItem(currentHighScore, highScore);
+        localStorage.setItem(currentHighScore, 0);
     }
 
     if(score > storedHighScore){
@@ -160,7 +160,7 @@ const setHighScore = (score) =>{
 
     getById("mgHighScore").innerText = storedHighScore;
 
-    console.log(`storedHighScore is ${storedHighScore}`)
+    // console.log(`storedHighScore is ${storedHighScore}`)
 }
 
 setHighScore(); //calls this function on page load 

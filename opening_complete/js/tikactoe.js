@@ -46,7 +46,6 @@ const checkWin = (arr) => {
 };
 
 
-console.log(checkWin(arr))
 
 const getXScoringChances = () => {
     const combinations = [

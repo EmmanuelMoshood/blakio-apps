@@ -161,3 +161,8 @@ const setWhakAMoleHighScore = score => {
 
 setWhakAMoleHighScore();
 
+
+
+
+const GameResetBtn = getById("GameResetBtn");
+
