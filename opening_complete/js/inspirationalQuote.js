@@ -21,3 +21,12 @@ const data = {
 fetch(requestUrl, data).then(data => data.json().then(data => {
     console.log(data);
 })).catch(err => console.log(err));
+
+
+//refactor the request function using async await
+
+async function makeFetch () {
+    const response = await fetch(requestUrl, data);
+    const dataToJSON = await response.json();
+    
+}
