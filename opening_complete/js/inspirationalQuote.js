@@ -27,7 +27,7 @@ const data = {
 
 //refactor the request function using async await
 
-async function makeFetch () {
+const makeFetch = async () => {
     const response = await fetch(requestUrl,data);
     const dataToJSON = await response.json();
     console.log(dataToJSON);
